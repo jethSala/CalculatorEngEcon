@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ASsmall.png">
+    <title>Engineering Economics Calculator</title>
+</head>
+<body>
+    <nav>
+        <img src="AS.png">
+        <h3>Engineering Economics Calculator</h3>
+        <img src="CCSE.png">
+    </nav>
+    <div id="wrapper">
+        <p> Select calculating options:
+            <select id="select1">
+                <option value="presentAnuity">Present Value of an Annuity</option>
+                <option value="futureAnuity">Future Value of an Annuity</option>
+                <option value="PED">Price Elasticity Demand</option>
+                <option value="presenttimeValue">Present Time Value of Money</option>
+                <option value="futuretimeValue">Future Time Value of Money</option>
+            </select>
+        </p>
+        <div id="wrapper2">
+            <div>
+                <p>Currency:
+                    <select id="currency1">
+                        <option value="₱">Philippine Peso</option>
+                        <option value="$">American Dollar</option>
+                        <option value="¥">Japanese Yen</option>
+                        <option value="₩">Korean Won</option>
+                        <option value="﷼.">Saudi Arabian SAR</option>
+                        <option value="€">British Euro</option>
+                    </select></br></br>
+                    Compounded:
+                    <select id="compounded1">
+                        <option value="1">Anually</option>
+                        <option value="2">Semi-Anually</option>
+                        <option value="4">Quarterly</option>
+                        <option value="12">Monthly</option>
+                        <option value="52">Weekly</option>
+                        <option value="365">Daily</option>
+                    </select></br></br>
+                    Regular Deposit Made: <input type="number" id="RDM" placeholder="Enter number"></br></br>
+                    Interest: <input type="number" id="I" placeholder="Enter number"></br></br>
+                    Years: <input type="number" id="Years" placeholder="Enter number"></br></br>
+                    <button onclick="solve()">Solve</button></br></br>
+                    <text id="output">Present Value: </text></br></br>
+                <text id="interest">Interest Earned: </text>
+                </p>
+            </div>
+            <div>
+                <p>Currency:
+                    <select id="currency2">
+                        <option value="₱">Philippine Peso</option>
+                        <option value="$">American Dollar</option>
+                        <option value="¥">Japanese Yen</option>
+                        <option value="₩">Korean Won</option>
+                        <option value="﷼.">Saudi Arabian SAR</option>
+                        <option value="€">British Euro</option>
+                    </select></br></br>
+                    Compounded:
+                    <select id="compounded2">
+                        <option value="1">Anually</option>
+                        <option value="2">Semi-Anually</option>
+                        <option value="4">Quarterly</option>
+                        <option value="12">Monthly</option>
+                        <option value="52">Weekly</option>
+                        <option value="365">Daily</option>
+                    </select></br></br>
+                    Regular Deposit Made: <input type="number" id="RDM2" placeholder="Enter number"></br></br>
+                    Interest: <input type="number" id="I2" placeholder="Enter number"></br></br>
+                    Years: <input type="number" id="Years2" placeholder="Enter number"></br></br>
+                    <button onclick="solve()">Solve</button></br></br>
+                    <text id="output2">Future Value: </text></br></br>
+                <text id="interest2">Interest Earned: </text>
+                </p>
+            </div>
+            <div>
+                <p>
+                    Price 1: <input type="number" id="p1" placeholder="Enter number"></br></br>
+                    Price 2: <input type="number" id="p2" placeholder="Enter number"></br></br>
+                    Quantity 1: <input type="number" id="q1" placeholder="Enter number"></br></br>
+                    Quantity 2: <input type="number" id="q2" placeholder="Enter number"></br></br>
+                    <button onclick="solve()">Solve</button></br></br>
+                    <text id="output3">Price Elasticity of Demand: </text></br></br>
+                    <text id="typeElas">Elasticity: </text>
+                </p>
+            </div>
+            <div>
+                <p>Currency:
+                    <select id="currency3">
+                        <option value="₱">Philippine Peso</option>
+                        <option value="$">American Dollar</option>
+                        <option value="¥">Japanese Yen</option>
+                        <option value="₩">Korean Won</option>
+                        <option value="﷼.">Saudi Arabian SAR</option>
+                        <option value="€">British Euro</option>
+                    </select></br></br>
+                Compounded:
+                    <select id="compounded3">
+                        <option value="1">Anually</option>
+                        <option value="2">Semi-Anually</option>
+                        <option value="4">Quarterly</option>
+                        <option value="12">Monthly</option>
+                        <option value="52">Weekly</option>
+                        <option value="365">Daily</option>
+                    </select></br></br>
+                    Future Value: <input type="number" id="FV" placeholder="Enter number"></br></br>
+                    Interest: <input type="number" id="I3" placeholder="Enter number"></br></br>
+                    Years: <input type="number" id="Y3" placeholder="Enter number"></br></br>
+                    <button onclick="solve()">Solve</button></br></br>
+                    <text id="output4">Present Value: </text>
+                </p>
+            </div>
+            <div>
+                <p>Currency:
+                    <select id="currency4">
+                        <option value="₱">Philippine Peso</option>
+                        <option value="$">American Dollar</option>
+                        <option value="¥">Japanese Yen</option>
+                        <option value="₩">Korean Won</option>
+                        <option value="﷼.">Saudi Arabian SAR</option>
+                        <option value="€">British Euro</option>
+                    </select></br></br>
+                    Compounded:
+                    <select id="compounded4">
+                        <option value="1">Anually</option>
+                        <option value="2">Semi-Anually</option>
+                        <option value="4">Quarterly</option>
+                        <option value="12">Monthly</option>
+                        <option value="52">Weekly</option>
+                        <option value="365">Daily</option>
+                    </select></br></br>
+                    Present Value: <input type="number" id="PV" placeholder="Enter number"></br></br>
+                    Interest: <input type="number" id="I4" placeholder="Enter number"></br></br>
+                    Years: <input type="number" id="Y4" placeholder="Enter number"></br></br>
+                    <button onclick="solve()">Solve</button></br></br>
+                    <text id="output5">Future Value: </text>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js">
+    </script>
+</body>
+</html>

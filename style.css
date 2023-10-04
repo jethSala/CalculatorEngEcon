@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+#wrapper {
+    margin: auto;
+    width: 600px;
+    height: 750px;
+    background: #712f70;
+    padding: 10px 40px;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    border-radius: 10px 20px 15px 30px;
+}
+
+body {
+    background: url(bg.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#wrapper2 {
+    margin: auto;
+    position: relative;
+    height: 650px;
+    width: 500px;
+}
+
+nav img {
+    width: 110px;
+    padding: 15px;
+    margin-left: 15px;
+}
+
+img:nth-child(1) {
+    width: 200px;
+    margin-left: -70px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav h3 {
+    padding: 10px;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+#select1 {
+    padding: 5px;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    font-family: arial;
+    cursor: pointer;
+}
+
+#wrapper div {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to top, #49127b, #95707000);
+}
+
+#wrapper2 div {
+    background: rgb(0 0 0 / 27%);
+    box-shadow: 0 0 92px #67184b;
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper2 div input[type="number"] {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    background: #fff;
+    font-style: italic;
+}
+
+.displayNone {
+    display: none;
+}
+
+#compounded1, #compounded2, #compounded3, #compounded4, #currency1, #currency2, #currency3, #currency4 {
+    padding: 6px;
+    border-radius: 5px 5px 0 0;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    font-family: arial;
+    cursor: pointer;
+}
+
+button {
+    outline: none;
+    border: 0;
+    padding: 12px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #00000073;
+    color: white;
+}
+
+#wrapper div p {
+    text-align: left;
+    padding: 18px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+#wrapper2 div input[type="number"]::placeholder {
+    opacity: 0.5;
+}
+
+@media (max-width: 375px) {
+    nav {
+        width: 191%;
+    }
+    nav img {
+        display: none;
+    }
+}
